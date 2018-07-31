@@ -116,4 +116,5 @@ WORKDIR /
 ENV HOME /root
 ENV STATSD_INTERFACE udp
 
-CMD ["/sbin/my_init"]
+# CMD ["/sbin/my_init"]
+CMD ["/sbin/my_init","--", "setuser", "nonroot", "bash"]
